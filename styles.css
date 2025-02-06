@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .navbar {
+    background-color: #2ecc71;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    margin: 0 1rem;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover, .navbar ul li a.active {
+    background-color: #27ae60;
+  }
+  
+  .tab-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input, select, button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+  }
+  
+  button {
+    background-color: #2ecc71;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  input[type="file"] {
+    border: none;
+  }

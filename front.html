@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.style.display = 'none');
+
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('crop-recommendation'); // Show the first tab by default
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showTab('crop-recommendation')" class="active">Crop Recommendation</a></li>
+            <li><a href="#" onclick="showTab('fertilizer-suggestion')">Fertilizer Suggestion</a></li>
+            <li><a href="#" onclick="showTab('disease-detection')">Disease Detection</a></li>
+        </ul>
+    </nav>
+
+    <section id="crop-recommendation" class="tab-content">
+        <h1>Get Crop Recommendations</h1>
+        <form>
+            <label for="nitrogen">Nitrogen</label>
+            <input type="number" id="nitrogen" name="nitrogen" placeholder="Enter nitrogen">
+            <label for="phosphorus">Phosphorus</label>
+            <input type="number" id="Phosphorus" name="phosphorus" placeholder=" Enter phosphorus">
+            <label for="potassium">Potassium</label>
+            <input type="number" id="Potassium" name="potassium" placeholder="Enter potassium">
+
+
+
+            <label for="humidity">Humidity (%)</label>
+            <input type="number" id="humidity" name="humidity" placeholder="Enter humidity">
+
+            <label for="ph">Soil pH</label>
+            <input type="number" id="ph" name="ph" placeholder="Enter soil pH">
+
+            <label for="temperature">Temperature (°C)</label>
+            <input type="number" id="temperature" name="temperature" placeholder="Enter temperature">
+
+            <label for="rainfall">Rainfall (mm)</label>
+            <input type="number" id="rainfall" name="rainfall" placeholder="Enter rainfall">
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+    </section>
+
+    <section id="fertilizer-suggestion" class="tab-content" style="display: none;">
+        <h1>Fertilizer Recommendation</h1>
+        <p>Upload your soil test results or enter soil parameters to get personalized fertilizer recommendations.</p>
+        <input type="file" id="soil-test-report" name="soil-test-report">
+    </section>
+
+    <section id="disease-detection" class="tab-content" style="display: none;">
+        <h1>Crop Disease Detection</h1>
+        <p>Upload a clear image of the affected plant part to detect diseases.</p>
+        <input type="file" id="plant-image" name="plant-image">
+    </section>
+</body>
+</html>
